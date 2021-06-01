@@ -16,11 +16,9 @@ app.get('/tshirt',(req, res) => {
 });
 app.post('/tshirt:id',(req, res) => { 
     const { id } = req.params;
-    
     const { logo} = req.logo;
-
     if( !logo){
-        res.status(418).send({messaje:' we need a loog!'})
+        res.status(418).send({messaje:' we need a logo!'})
     }
     res.send({
         tshirt: `  with your ${logo} and IOD of ${id}`,
